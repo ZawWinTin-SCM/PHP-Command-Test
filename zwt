@@ -1,0 +1,13 @@
+<?php
+
+require_once "./Controller/CommandController.php";
+require_once "./Controller/MakeFileController.php";
+
+$commands = new CommandController();
+$makeFiles = new MakeFileController();
+
+if (isset($_SERVER['argv'][1]) && str_contains($_SERVER['argv'][1], 'make:')) {
+    $makeFiles->make();
+} else {
+    $commands->command();
+}

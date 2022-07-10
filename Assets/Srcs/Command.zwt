@@ -1,0 +1,7 @@
+<?php
+
+if (count($_SERVER['argv']) >= 3) {
+    // one or more parameter
+} else {
+    // no parameter
+}
